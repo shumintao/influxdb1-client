@@ -422,7 +422,7 @@ func (c *client) Write(bp BatchPoints) error {
 	if c.encoding != DefaultEncoding {
 		req.Header.Set("Content-Encoding", string(c.encoding))
 	}
-	req.Header.Set("Content-Type", "text/plain")
+	req.Header.Set("Content-Type", "")
 	req.Header.Set("User-Agent", c.useragent)
 	if c.username != "" {
 		req.SetBasicAuth(c.username, c.password)
